@@ -1,0 +1,28 @@
+{
+  "name": "fes32",
+  "id": 1,
+  "module": "Fes32",
+  "sources": [
+    "rtl/Fes32.sv",
+    "rtl/riscv_core.v"
+  ],
+  "include_dirs": [],
+  "defines": {},
+  "parameters": {
+    "IO_WIDTH": 66
+  },
+  "tests": [
+    {
+      "name": "io",
+      "kind": "unit",
+      "top": "Fes32Tb",
+      "sources": ["tests/Fes32Tb.sv"]
+    },
+    {
+      "name": "frame",
+      "kind": "frame",
+      "top": "FrameFes32Tb",
+      "sources": ["tests/FrameFes32Tb.sv"]
+    }
+  ]
+}
